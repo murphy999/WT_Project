@@ -1,0 +1,224 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CAR-MA | Registeration</title>
+
+   <!-- CSS-->
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap-social.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/font-awesome.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/styling2.css">
+    <style type="text/css">
+
+      .row{
+        padding :0 0 0 0 ;
+      }
+
+
+
+    </style>
+
+     <!--JQUERY-->
+    <script src="bootstrap-3.3.5-dist/js/jquery-2.1.4.min.js"></script>
+     <script>
+      function validate(){
+        var msg = "";
+        var pattern = /^[a-zA-Z\s]+$/;
+        var el = document.getElementById("src");
+        if (!pattern.test(el.value)) msg+="Name can only have letters and spaces."
+
+          if(msg !=""){
+            alert(msg);
+            return false;
+          } else return true;
+      }
+    </script>   
+   
+  </head>
+
+  <body>
+     
+      <header class="main__header">
+  <div class="container">
+    <nav class="navbar navbar-default" role="navigation"> 
+      <!-- Brand and toggle get grouped for better mobile display --> 
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="navbar-header">
+        <h1 class="navbar-brand"><a href="index.html"><img src="images/logo.png" id="logo">  carMA</a></h1>
+        <a href="#" onClick="javascript.void()" class="submenu">Menus</a> </div>
+      <div class="menuBar">
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown"><a href="signin.html">Signup</a>
+            <ul>
+              <li><a href="signin.html">Login</a></li>
+              <li><a href="signin.html">Signup</a></li>
+            </ul>
+          </li>
+          <li class="active"><a href="tarif.html">Tariff</a>
+            <ul>
+              <li><a href="cartype.jsp#sedan">Sedan</a></li>
+              <li><a href="cartype.jsp#hachback">Hatchback</a></li>
+              <li><a href="cartype.jsp#suv">SUV</a></li>
+              <li><a href="cartype.jsp#luvury">Luxury </a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Settings</a>
+            <ul>
+                <li><a href="#">Setting1</a></li>
+                <li><a href="#">Setting2</a></li>
+            </ul>
+          </li>
+          <li><a href="profilepage.jsp">Profile</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse --> 
+    </nav>
+  </div>
+</header>
+   
+        <br><br><br>
+        <br><br><br>
+         <!--BreadCrumb-->
+        <ol class="breadcrumb">
+          <li><a href="index.html">Home</a><span class="glyphicon glyphicon-circle-arrow-right"></span></li>
+          <li><a href="tarif.html">Tariff</a><span class="glyphicon glyphicon-circle-arrow-right"></span></li>
+          <li class="active"><a href="register.html">Registeration</a></li>
+        </ol>
+         
+        <!--BOOKING FORM-->
+  <div class="container-fluid">
+        <h2>REGISTER FOR THE TRIP</h2>
+
+    <div class="form-group row" id="register" onsubmit="return validate()">
+
+        <div class="form-group row">
+           <label for="example-text-input" class="col-xs-3 col-form-label">Source</label>
+           <div class="col-xs-8">
+            <input class="form-control" type="text" placeholder="Source" id="src" name = "src" required>
+
+               <!-- <div ng-show="form.$submitted || form.src.$touched"><!-- ng-show directive also ng-hide directive present..content show when true else false-->
+                 <!-- <div ng-show="form.src.$error.required">Tell us your Source.
+                  </div>-->
+                <!--</div>-->
+            </div>
+        </div>
+  
+        <div class="form-group row">
+          <label for="example-text-input" class="col-xs-3 col-form-label">Destination</label>
+
+          <div class="col-xs-8">
+             <input class="form-control" type="text" placeholder="Destination" id="example-text-input" name="dest" required>
+              <!--<div ng-show="form.$submitted || form.dest.$touched">
+                <!--  <div ng-show="form.dest.$error.required">Tell us your Destination.
+                  </div>-->
+               <!-- </div>-->
+          </div>
+        </div>
+
+        <div class="form-group row">
+           <label for="example-number-input" class="col-xs-3 col-form-label">No of Days</label>
+           <div class="col-xs-8">
+              <input class="form-control" type="number" placeholder="1" id="example-number-input" required>
+           </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="example-date-input" class="col-xs-3 col-form-label">Date</label>
+          <div class="col-xs-8">
+            <input class="form-control" type="date" placeholder="2013-09-19" id="example-date-input"  required>
+           </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="example-time-input" class="col-xs-3 col-form-label">Time</label>
+          <div class="col-xs-8">
+             <input class="form-control" type="time" placeholder="21:00:00" id="example-time-input" required>
+          </div>
+        </div>
+        <button type="submit" id="input-submit" class="form-control btn btn-info">BOOK</button>
+
+      </div> <!--Form-->
+  </div>
+      <hr>
+
+      <!-- FOOTER BEGINS --> <!--<img src="images/logo_2.png" class="container image-responsive " width="80%">-->
+        <div class="container-fluid" id="footer">
+          <div class="row">
+
+             <div class="col-xs-4 col-lg-4">
+               <img src="images/logo.png" id="logo">
+             </div>
+
+             <div class="col-xs-4 col-lg-4">
+                <h4>COMPANY</h4>
+             </div>
+
+            <div class="col-xs-4 col-lg-4">
+               <h4>POLICIES</h4>
+            </div>
+
+          </div> <!--/row -->
+
+          <div class ="row">
+
+             <div class="col-xs-4 col-lg-4" >
+             <p style="display:inline-block">
+               <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> 
+               <p style="display: inline;">&nbsp;support@carma.in</p>
+             </p>
+             <p style="display:inline-block">
+               <span class="glyphicon glyphicon-phone-alt" aria-hidden="true" style="display:inline;"></span>
+               <p style="display:inline;">&nbsp;022-23478610</p>
+             </p>
+             <p style="display:inline-block">
+               <span class="glyphicon glyphicon-time" aria-hidden="true"></span> 
+               <p style="display: inline;">&nbsp;24x7</p>
+             </p>
+             </div>
+
+             <div class="col-xs-4 col-lg-4">
+               <ul>
+                 <li href="#">Careers</li>
+                 <li href="#">FAQs</li>
+                 <li href="#">Blog</li>
+                 <li href="#">Contact Us</li>
+               </ul>
+             </div>
+
+             <div class="col-xs-4 col-lg-4">
+               <ul>
+                 <li href="#">Rental Agreement</li>
+                 <li href="#">Refund &amp; Cancellation</li>
+                 <li href="#">Terms &amp; Condition</li>
+               </ul>
+
+               <a class="btn btn-social-icon btn-twitter">
+                 <span class="fa fa-twitter"></span>
+               </a>
+               <a class="btn btn-social-icon btn-facebook">
+                  <span class="fa fa-facebook"></span>
+               </a>
+               <a class="btn btn-social-icon btn-github">
+                 <span class="fa fa-linkedin"></span>
+               </a>
+               <a class="btn btn-social-icon btn-reddit">
+                  <span class="fa fa-reddit"></span>
+              </a>   
+         </div>          
+      </div><!--row2---->
+
+    </div> <!-- /container -->
+
+       <!---Java Script-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+       <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+      
+  </body>
+</html>
+

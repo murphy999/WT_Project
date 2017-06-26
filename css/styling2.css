@@ -1,0 +1,85 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500);
+
+
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body, html{
+   font-family: 'Roboto', sans-serif; 
+   }
+
+ h4,h3{
+    color: red;
+   }
+
+/* LOGO*/
+#logo {
+  width: 90px;
+  height: 70px; }
+
+
+/*Breadcrumb*/
+.breadcrumb>li+li:before{
+  content: none; }
+
+/*register page */
+.container-fluid >h2{
+	text-shadow:2px 2px;
+	text-align:center; 
+	padding-bottom: 25px;
+	margin-bottom: 20px;
+}
+.form-group label{
+	line-height: 28px;
+    font-weight: 300;
+    color: #3CBC8D;
+     }
+
+.form-control{
+	width: 40%;
+}
+#register{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.col-form-label{
+	padding-left: 10px;
+	margin-left: 20px;
+	width: 15%;
+}
+
+input[type=text]:focus{
+	border: 3px solid #555;
+}
+input[type=time]:focus{
+	border: 3px solid #555;
+}
+input[type=date]:focus{
+	border: 3px solid #555;
+}
+input[type=number]:focus{
+	border: 3px solid #555;
+}
+
+.form-group input.ng-invalid.ng-touched {
+  background-color: #FA787E;
+}
+
+.form-group input.ng-valid.ng-touched {
+  background-color: #78FA89;
+}
+
+/*Footer*/
+#footer{
+  color:#FFD700 ;
+  background-color: black;
+}
+.col-xs-4 h4{
+  padding-top: 12px; }
+
+.col-xs-4>ul{
+list-style:none;
+position:relative;
+left:-40px; }
